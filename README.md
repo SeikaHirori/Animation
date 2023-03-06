@@ -17,9 +17,9 @@ ______
 # Project 6 | Specifications
 
 - Part 1 | Overview: https://www.hackingwithswift.com/100/swiftui/32
-    - [ ] 1. Animation: Introduction
-        - WIP
+    - [x] 1. Animation: Introduction
     - [ ] 2. Creating implicit animations
+            - WIP
     - [ ] 3. Customizing animations in SwiftUI
     - [ ] 4. Animating bindings
     - [ ] 5. Creating explicit animations
