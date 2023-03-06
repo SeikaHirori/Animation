@@ -44,6 +44,7 @@
 		3F3088FD29B6A9A500ED0021 /* AnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F30890129B6A9A500ED0021 /* AnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationUITests.swift; sourceTree = "<group>"; };
 		3F30890329B6A9A500ED0021 /* AnimationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3F30891029B6A9E700ED0021 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 		3F3088DA29B6A9A200ED0021 = {
 			isa = PBXGroup;
 			children = (
+				3F30891029B6A9E700ED0021 /* README.md */,
 				3F3088E529B6A9A200ED0021 /* Animation */,
 				3F3088F629B6A9A500ED0021 /* AnimationTests */,
 				3F30890029B6A9A500ED0021 /* AnimationUITests */,
