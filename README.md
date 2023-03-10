@@ -3,6 +3,9 @@
 
 ***House Keeping***
 
+Blog post: 
+- TBA
+____
 Index for Checklist:
 
     = TO-DO
