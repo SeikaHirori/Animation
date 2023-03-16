@@ -27,42 +27,30 @@ struct part_1_implementation: View {
     @State private var animationAmount: Double = 1.0
     
     var body: some View {
-        print(animationAmount)
         
         return VStack {
             HStack {
-            Stepper("Scale amount",
-                    value: $animationAmount.animation(
-                        .easeInOut(duration: 1)
-                        .repeatCount(3, autoreverses: true)
-                    ),
-                    in: 1...10)
                 
-                Text("\(animationAmount.formatted())")
+                Button("Tap Me") {
+                    // Do nothing :333
+                }
+                .padding(50)
+                .background(.red)
+                .foregroundColor(.white)
+                .clipShape(Circle())
+                .onChange(of: animationAmount) { _ in
+                    debug_print_animation_state(animationAmount: animationAmount)
+                }
+                
+                
             }
-            Spacer()
-            
-            Button("Tap Me") {
-                animationAmount += 1
-            }
-            .padding(40)
-            .background(.red)
-            .foregroundColor(.white)
-            .clipShape(Circle())
-            .scaleEffect(animationAmount)
-            .onChange(of: animationAmount) { _ in
-                debug_print_animation_state(animationAmount: animationAmount)
-            }
-            
-            
+            .padding()
         }
-        .padding()
+        
+        func debug_print_animation_state(animationAmount: Double) {
+            print("Animation amount: \(animationAmount)")
+        }
     }
-    
-    func debug_print_animation_state(animationAmount: Double) {
-        print("Animation amount: \(animationAmount)")
-    }
-
 }
 
 struct part_2_implementation: View {
