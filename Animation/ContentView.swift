@@ -58,17 +58,22 @@ struct part_1_implementation: View {
 struct part_2_implementation: View {
     
     @Binding var hello_World:String
+
     @State private var animationAmount: Double = 0.0
+    @State private var enabled: Bool = false
 
     
     var body: some View {
-        VStack(spacing:10) {
+        print(enabled)
+        
+        return VStack(spacing:10) {
             Button("Tap Me") {
-                // do nothing
+                enabled.toggle()
             }
             .frame(width: 200, height: 200)
-            .background(Color.blue)
+            .background(enabled ? Color.blue : Color.red)
             .foregroundColor(Color.white)
+            .animation(.default, value: enabled)
         }
     }
     
