@@ -69,6 +69,16 @@ struct part_2_implementation: View {
             .frame(width: 300, height: 200)
             .clipShape(RoundedRectangle(cornerRadius: 10)
             )
+            .offset(dragAmount)
+            .gesture(
+                DragGesture()
+                    .onChanged { wheee in
+                        dragAmount = wheee.translation
+                    }
+                    .onEnded { _ in
+                        dragAmount = .zero
+                    }
+            )
         }
     }
 }
