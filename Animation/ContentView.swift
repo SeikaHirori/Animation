@@ -66,8 +66,8 @@ struct part_2_implementation: View {
             Button("Tap Me") {
                 // do nothing
             }
-            .background(Color.blue)
             .frame(width: 200, height: 200)
+            .background(Color.blue)
             .foregroundColor(Color.white)
         }
     }
