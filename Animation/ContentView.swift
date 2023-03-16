@@ -57,31 +57,32 @@ struct part_1_implementation: View {
 
 struct part_2_implementation: View {
     
-    @State private var dragAmount:CGSize = CGSize.zero
+    let letters = Array("Hello SwiftUI")
+    @State private var enabled:Bool = false
+    @State private var dragAmount = CGSize.zero
     
     var body: some View {
         
-        return VStack(spacing:10) {
-            LinearGradient(gradient: Gradient(colors: [.yellow, .red]),
-                           startPoint: .topLeading,
-                           endPoint: .bottomTrailing
-            )
-            .frame(width: 300, height: 200)
-            .clipShape(RoundedRectangle(cornerRadius: 10)
-            )
-            .offset(dragAmount)
-            .gesture(
-                DragGesture()
-                    .onChanged { wheee in
-                        dragAmount = wheee.translation
-                    }
-                    .onEnded { _ in
-                        withAnimation(.spring()) {
-                            dragAmount = .zero
-                        }
-                    }
-            )
+        return HStack(spacing: 0) {
+            ForEach(0..<letters.count, id: \.self) { num in
+                Text(String(letters[num]))
+                    .padding(5)
+                    .font(.title)
+                    .background(enabled ? .blue : .red)
+                    .offset(dragAmount)
+                    .animation(.default.delay(Double(num) / 20), value: dragAmount)
+            }
         }
+        .gesture(
+            DragGesture()
+                .onChanged {
+                    dragAmount = $0.translation
+                }
+                .onEnded { _ in
+                    dragAmount = .zero
+                    enabled.toggle()
+                }
+        )
     }
 }
 
