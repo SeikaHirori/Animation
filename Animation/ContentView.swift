@@ -76,11 +76,11 @@ struct part_2_implementation: View {
                         dragAmount = wheee.translation
                     }
                     .onEnded { _ in
-                        dragAmount = .zero
+                        withAnimation(.spring()) {
+                            dragAmount = .zero
+                        }
                     }
             )
-            .animation(.spring(), value: dragAmount)
-
         }
     }
 }
