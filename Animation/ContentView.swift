@@ -32,7 +32,7 @@ struct part_1_implementation: View {
             HStack {
                 
                 Button("Tap Me") {
-                    withAnimation(.interpolatingSpring(stiffness: 5, damping: 2)){
+                    withAnimation(.easeInOut(duration: 5 )){
                         animationAmount += 360
                     }
                     
@@ -41,7 +41,7 @@ struct part_1_implementation: View {
                 .background(.red)
                 .foregroundColor(.white)
                 .clipShape(Circle())
-                .rotation3DEffect(.degrees(animationAmount), axis: (x:0, y:90, z:30))
+                .rotation3DEffect(.degrees(animationAmount), axis: (x:3, y:90, z:30))
                 .onChange(of: animationAmount) { _ in
                     debug_print_animation_state(animationAmount: animationAmount)
                 }
