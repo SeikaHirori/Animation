@@ -28,32 +28,21 @@ struct part_1_implementation: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text(hello_World)
+            HStack {
+            Stepper("Scale amount", value: $animationAmount.animation(), in: 1...10)
+                
+                Text("\(animationAmount.formatted())")
+            }
+            Spacer()
             
             Button("Tap Me") {
-//                animationAmount += 1
+                animationAmount += 1
             }
-            .padding(50)
+            .padding(40)
             .background(.red)
             .foregroundColor(.white)
             .clipShape(Circle())
-            .overlay(
-                Circle()
-                    .stroke(.red)
-                    .scaleEffect(animationAmount)
-                    .opacity(2 - animationAmount)
-                    .animation(
-                        .easeInOut(duration: 1)
-                            .repeatForever(autoreverses: false),
-                        value: animationAmount
-                    )
-            )
-            .onAppear {
-                animationAmount = 2
-            }
+            .scaleEffect(animationAmount)
             .onChange(of: animationAmount) { _ in
                 debug_print_animation_state(animationAmount: animationAmount)
             }
@@ -68,7 +57,6 @@ struct part_1_implementation: View {
     }
 
 }
-// test
 
 struct part_2_implementation: View {
     @Binding var hello_World:String
