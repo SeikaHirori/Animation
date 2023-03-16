@@ -72,7 +72,7 @@ struct part_2_implementation: View {
                 Rectangle()
                     .fill(.red)
                     .frame(width: 200, height: 200)
-                    .transition(.scale) // Scaling works on physical device
+                    .transition(.asymmetric(insertion: .scale, removal: .opacity)) // Scaling works on physical device
             }
         }
     }
