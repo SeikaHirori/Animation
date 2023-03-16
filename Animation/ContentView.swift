@@ -12,7 +12,7 @@ struct ContentView: View {
     
     
     var body: some View {
-        part_2_implementation(hello_World: $hello_World)
+        part_2_implementation()
     }
 }
 
@@ -57,29 +57,20 @@ struct part_1_implementation: View {
 
 struct part_2_implementation: View {
     
-    @Binding var hello_World:String
-
-    @State private var animationAmount: Double = 0.0
-    @State private var enabled: Bool = false
-
+    @State private var dragAmount:CGSize = CGSize.zero
     
     var body: some View {
-        print(enabled)
         
         return VStack(spacing:10) {
-            Button("Tap Me") {
-                enabled.toggle()
-            }
-            .frame(width: 200, height: 200)
-            .background(enabled ? Color.blue : Color.red)
-            .animation(nil, value: enabled)
-            .foregroundColor(Color.white)
-            .clipShape(RoundedRectangle(cornerRadius: enabled ? 60 : 0))
-            .animation(.interpolatingSpring(stiffness: 10, damping: 1), value: enabled)
-           
+            LinearGradient(gradient: Gradient(colors: [.yellow, .red]),
+                           startPoint: .topLeading,
+                           endPoint: .bottomTrailing
+            )
+            .frame(width: 300, height: 200)
+            .clipShape(RoundedRectangle(cornerRadius: 10)
+            )
         }
     }
-    
 }
 
 // RFER #1
