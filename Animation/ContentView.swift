@@ -41,6 +41,7 @@ struct part_1_implementation: View {
             .foregroundColor(.white)
             .clipShape(Circle())
             .scaleEffect(animationAmount)
+            .animation(.default, value: animationAmount)
             .onChange(of: animationAmount) { _ in
                 debug_print_animation_state(animationAmount: animationAmount)
             }
