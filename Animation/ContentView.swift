@@ -32,7 +32,7 @@ struct part_1_implementation: View {
             HStack {
                 
                 Button("Tap Me") {
-                    withAnimation{
+                    withAnimation(.interpolatingSpring(stiffness: 5, damping: 2)){
                         animationAmount += 360
                     }
                     
