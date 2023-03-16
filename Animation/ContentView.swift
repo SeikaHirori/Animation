@@ -34,15 +34,15 @@ struct part_1_implementation: View {
             Text(hello_World)
             
             Button("Tap Me") {
-                animationAmount += 1
+//                animationAmount += 1
             }
             .padding(50)
-            .background(Color.red)
+            .background(.red)
             .foregroundColor(.white)
             .clipShape(Circle())
             .overlay(
                 Circle()
-                    .stroke(Color.red)
+                    .stroke(.red)
                     .scaleEffect(animationAmount)
                     .opacity(2 - animationAmount)
                     .animation(
