@@ -74,6 +74,7 @@ struct part_2_implementation: View {
             .background(enabled ? Color.blue : Color.red)
             .foregroundColor(Color.white)
             .animation(.default, value: enabled)
+            .clipShape(RoundedRectangle(cornerRadius: enabled ? 60 : 0))
         }
     }
     
