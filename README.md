@@ -22,9 +22,9 @@ ______
 - Part 1 | Overview: https://www.hackingwithswift.com/100/swiftui/32
     - [x] 1. Animation: Introduction
     - [x] 2. Creating implicit animations
-    - [ ] 3. Customizing animations in SwiftUI
-        - WIP
+    - [x] 3. Customizing animations in SwiftUI
     - [ ] 4. Animating bindings
+            - WIP
     - [ ] 5. Creating explicit animations
 
 
