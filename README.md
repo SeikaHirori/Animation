@@ -31,10 +31,9 @@ ______
 - Part 2 | Implementation: https://www.hackingwithswift.com/100/swiftui/33
     - [x] 1. Controlling the animation stack
     - [x] 2. Animating gestures
-    - [ ] 3. Showing and hiding views with transitions       
-        - WIP
+    - [x] 3. Showing and hiding views with transitions       
     - [ ] 4. Building custom transitions using ViewModifier
-
+        - WIP   
 
     
 - Part 3 | Challenge: https://www.hackingwithswift.com/100/swiftui/34
