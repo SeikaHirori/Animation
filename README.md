@@ -29,9 +29,9 @@ ______
 
 
 - Part 2 | Implementation: https://www.hackingwithswift.com/100/swiftui/33
-    - [ ] 1. Controlling the animation stack
-            - WIP
+    - [x] 1. Controlling the animation stack
     - [ ] 2. Animating gestures
+        - WIP
     - [ ] 3. Showing and hiding views with transitions
     - [ ] 4. Building custom transitions using ViewModifier
 
