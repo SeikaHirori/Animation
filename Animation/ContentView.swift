@@ -44,7 +44,7 @@ struct part_1_implementation: View {
             .blur(radius: (animationAmount - 1) * 3)
             .animation(
                 .easeInOut(duration: 1)
-                .repeatCount(5, autoreverses: true),
+                .repeatForever(),
                value: animationAmount
             )
             .onChange(of: animationAmount) { _ in
