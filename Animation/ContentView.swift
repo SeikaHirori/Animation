@@ -79,6 +79,8 @@ struct part_2_implementation: View {
                         dragAmount = .zero
                     }
             )
+            .animation(.spring(), value: dragAmount)
+
         }
     }
 }
