@@ -57,17 +57,20 @@ struct part_1_implementation: View {
 
 struct part_2_implementation: View {
     
+    @State private var isShowingRed: Bool = false
+    
     var body: some View {
         
         return VStack {
             Button("Tap Me") {
-                // Do nothin :333
+                isShowingRed.toggle()
             }
             
-            Rectangle()
-                .fill(.red)
-                .frame(width: 200, height: 200)
-
+            if isShowingRed {
+                Rectangle()
+                    .fill(.red)
+                    .frame(width: 200, height: 200)
+            }
         }
     }
 }
