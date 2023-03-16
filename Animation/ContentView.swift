@@ -27,9 +27,16 @@ struct part_1_implementation: View {
     @State private var animationAmount: Double = 1.0
     
     var body: some View {
-        VStack {
+        print(animationAmount)
+        
+        return VStack {
             HStack {
-            Stepper("Scale amount", value: $animationAmount.animation(), in: 1...10)
+            Stepper("Scale amount",
+                    value: $animationAmount.animation(
+                        .easeInOut(duration: 1)
+                        .repeatCount(3, autoreverses: true)
+                    ),
+                    in: 1...10)
                 
                 Text("\(animationAmount.formatted())")
             }
