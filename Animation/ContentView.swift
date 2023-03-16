@@ -69,6 +69,8 @@ struct part_2_implementation: View {
                     .padding(5)
                     .font(.title)
                     .background(enabled ? .blue : .red)
+                    .clipShape(RoundedRectangle(cornerRadius: 20)
+                    )
                     .offset(dragAmount)
                     .animation(.default.delay(Double(num) / 20), value: dragAmount)
             }
