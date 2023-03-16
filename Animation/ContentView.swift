@@ -42,10 +42,10 @@ struct part_1_implementation: View {
             .clipShape(Circle())
             .scaleEffect(animationAmount)
             .blur(radius: (animationAmount - 1) * 3)
-            .animation(.easeOut, value: animationAmount)
+            .animation(.interpolatingSpring(stiffness: 50, damping: 1), value: animationAmount)
             .onChange(of: animationAmount) { _ in
                 debug_print_animation_state(animationAmount: animationAmount)
-            }`
+            }
             
             
         }
