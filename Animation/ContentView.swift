@@ -61,18 +61,21 @@ struct part_2_implementation: View {
     
     var body: some View {
         
-        return VStack {
-            Button("Tap Me") {
-                withAnimation {
-                    isShowingRed.toggle()
-                }
-            }
+        return ZStack {
+            Rectangle()
+                .fill(.blue)
+                .frame(width: 200, height: 200)
             
             if isShowingRed {
                 Rectangle()
                     .fill(.red)
                     .frame(width: 200, height: 200)
-                    .transition(.asymmetric(insertion: .scale, removal: .opacity)) // Scaling works on physical device
+                    .transition(.pivot) // Scaling works on physical device
+            }
+        }
+        .onTapGesture {
+            withAnimation {
+                isShowingRed.toggle()
             }
         }
     }
