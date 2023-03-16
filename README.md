@@ -24,13 +24,13 @@ ______
     - [x] 2. Creating implicit animations
     - [x] 3. Customizing animations in SwiftUI
     - [x] 4. Animating bindings
-    - [ ] 5. Creating explicit animations
-        - WIP
+    - [x] 5. Creating explicit animations
 
 
 
 - Part 2 | Implementation: https://www.hackingwithswift.com/100/swiftui/33
     - [ ] 1. Controlling the animation stack
+            - WIP
     - [ ] 2. Animating gestures
     - [ ] 3. Showing and hiding views with transitions
     - [ ] 4. Building custom transitions using ViewModifier

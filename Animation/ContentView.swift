@@ -12,7 +12,7 @@ struct ContentView: View {
     
     
     var body: some View {
-        part_1_implementation(hello_World: $hello_World)
+        part_2_implementation(hello_World: $hello_World)
     }
 }
 
@@ -56,16 +56,20 @@ struct part_1_implementation: View {
 }
 
 struct part_2_implementation: View {
+    
     @Binding var hello_World:String
+    @State private var animationAmount: Double = 0.0
+
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text(hello_World)
+        VStack(spacing:10) {
+            Button("Tap Me") {
+                // do nothing
+            }
+            .background(Color.blue)
+            .frame(width: 200, height: 200)
+            .foregroundColor(Color.white)
         }
-        .padding()
     }
     
 }
