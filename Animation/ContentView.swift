@@ -78,6 +78,28 @@ struct part_2_implementation: View {
     }
 }
 
+// Section 2.4
+struct CornerRotateModifier:ViewModifier {
+    let amount: Double
+    let anchor: UnitPoint
+    
+    func body(content: Content) -> some View {
+        content
+            .rotationEffect(.degrees(amount), anchor: anchor)
+            .clipped()
+    }
+}
+
+// Section 2.4
+extension AnyTransition {
+    static var pivot: AnyTransition {
+        .modifier(active: CornerRotateModifier(amount: -90, anchor: .topLeading),
+                  identity: CornerRotateModifier(amount: 0, anchor: .topLeading)
+        )
+    }
+}
+
+
 // RFER #1
 extension Binding {
     func onChange(_ handler: @escaping (Value) -> Void) -> Binding<Value> {
