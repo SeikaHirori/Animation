@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var hello_World: String = "Hello World :3"
+    @State private var hello_World: String = "Hello World :333"
     
     var body: some View {
         part_1_implementation(hello_World: $hello_World)
