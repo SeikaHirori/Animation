@@ -63,7 +63,9 @@ struct part_2_implementation: View {
         
         return VStack {
             Button("Tap Me") {
-                isShowingRed.toggle()
+                withAnimation {
+                    isShowingRed.toggle()
+                }
             }
             
             if isShowingRed {
