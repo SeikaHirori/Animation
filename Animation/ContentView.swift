@@ -24,7 +24,7 @@ struct ContentView_Previews: PreviewProvider {
 
 struct part_1_implementation: View {
     @Binding var hello_World:String
-    @State private var animationAmount: Double = 1.0
+    @State private var animationAmount: Double = 0.0
     
     var body: some View {
         
@@ -32,17 +32,19 @@ struct part_1_implementation: View {
             HStack {
                 
                 Button("Tap Me") {
-                    // Do nothing :333
+                    withAnimation{
+                        animationAmount += 360
+                    }
+                    
                 }
                 .padding(50)
                 .background(.red)
                 .foregroundColor(.white)
                 .clipShape(Circle())
+                .rotation3DEffect(.degrees(animationAmount), axis: (x:0, y:90, z:30))
                 .onChange(of: animationAmount) { _ in
                     debug_print_animation_state(animationAmount: animationAmount)
                 }
-                
-                
             }
             .padding()
         }
