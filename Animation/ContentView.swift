@@ -34,7 +34,7 @@ struct part_1_implementation: View {
         .padding()
     }
 }
-
+// test
 
 struct part_2_implementation: View {
     @Binding var hello_World:String
