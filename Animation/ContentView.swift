@@ -43,8 +43,8 @@ struct part_1_implementation: View {
             .scaleEffect(animationAmount)
             .blur(radius: (animationAmount - 1) * 3)
             .animation(
-                .easeInOut(duration: 2)
-            .delay(0.5),
+                .easeInOut(duration: 1)
+                .repeatCount(5, autoreverses: true),
                value: animationAmount
             )
             .onChange(of: animationAmount) { _ in
